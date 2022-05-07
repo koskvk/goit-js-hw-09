@@ -11,7 +11,7 @@ const options = {
         },
 };
 const inputEl = document.querySelector("#datetime-picker");
-const fp = flatpickr(inputEl, { options });
+const fp = flatpickr(inputEl, options);
 
 // function dateSelectedByTheUser(date) {
 //     console.log(date);
