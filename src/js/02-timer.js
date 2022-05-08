@@ -41,7 +41,7 @@ function dateSelectedByTheUser(date) {
 };
 
 function onStartBtnCkick() {
-    fp.destroy();
+    // fp.destroy();
     refs.inputEl.disabled = isDisabled;
     refs.startBtn.disabled = isDisabled;
     timer();
@@ -53,12 +53,12 @@ function timer() {
         const restOfTime = convertMs(restMs = selectedDate - Date.now());
 
         markupOutputData(restOfTime);
-        // Stop timer and disable input interface
+
+        // Stop timer and anable input interface
         if (restMs < 1000) {
             clearInterval(timerId);
             Notify.failure("Time is over!");
             refs.inputEl.disabled = !isDisabled;
-            refs.startBtn.disabled = !isDisabled;
         }
     }, 1000);
 };
