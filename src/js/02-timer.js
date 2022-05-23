@@ -41,6 +41,13 @@ function dateSelectedByTheUser(date) {
 };
 
 function onStartBtnCkick() {
+    if (Date.now() > selectedDate) {
+        refs.startBtn.disabled = isDisabled;
+        Notify.failure("Please choose a date in the future");
+
+        return;
+    };
+
     // fp.destroy();
     refs.inputEl.disabled = isDisabled;
     refs.startBtn.disabled = isDisabled;
